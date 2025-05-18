@@ -1,0 +1,61 @@
+.guide-footer-section {
+  background-color: #ffffff;
+}
+.guide-footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 8.7rem 0 11.97rem 12rem;
+}
+.guide-footer-body {
+  width: 140rem;
+  /* text-align: center; */
+}
+.footer-text {
+  max-width: 57rem;
+  margin: 0 auto;
+}
+.subscribe-button input {
+  border-radius: 10px;
+  margin-top: 2.5rem;
+  margin-bottom: 1.5rem;
+}
+.subscribe-button {
+  text-align: center;
+}
+.subscribe-button .subscribe-btn {
+  border-radius: 10px;
+}
+.footer-text h1 {
+  font-size: 3.2rem;
+}
+.footer-text p {
+  font-size: 2rem;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+  .guide-footer-body {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+  .guide-footer {
+    padding: 0;
+    display: block;
+  
+  }
+  .footer-text {
+    margin: 0;
+    max-width: 90vw;
+    padding-top: 4rem;
+     text-align: center;
+  }
+  .subscribe-button {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+  .footer-text h1{
+    font-size: 2.4rem;
+   
+  }
+}

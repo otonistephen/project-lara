@@ -1,0 +1,203 @@
+.early-days-h1 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 600;
+  font-size: 2.8rem;
+  letter-spacing: 0.1rem;
+  color: #19241d;
+  text-align: center;
+  margin-top: 7.2rem;
+  margin-bottom: 4.2rem;
+}
+.early-days-p {
+  max-width: 99.5rem;
+  margin: 0 auto;
+  font-family: Plus Jakarta Sans;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.4rem;
+  color: #000000;
+  letter-spacing: 0rem;
+}
+.early-days-flex {
+  display: flex;
+  max-width: 99.7rem;
+  margin: auto;
+  justify-content: space-between;
+  margin-top: 7.8rem;
+  padding-bottom: 15rem;
+  align-items: center;
+}
+.early-days-flex.active {
+  display: block;
+  max-width: unset;
+  padding-bottom: unset;
+}
+.hide {
+  visibility: hidden;
+}
+.prev-button.active {
+  opacity: 0;
+}
+
+.previous {
+  border: 1px solid #a0dbb8;
+  padding: 1.6rem 6.3rem 1.7rem 4.5rem;
+  margin-top: 2rem;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  font-size: 1.6rem;
+  letter-spacing: 0.1rem;
+}
+.cont-reading {
+  margin-top: 2rem;
+  padding: 1.6rem 4.8rem 1.7rem 2.3rem;
+  background-color: #ebf7f0;
+  border: 1px solid #a0dbb8;
+  display: flex;
+  align-items: center;
+  gap: 1.4rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+}
+.spantext {
+  max-width: 99.5rem;
+  margin: 0 auto;
+  font-family: Plus Jakarta Sans;
+  font-weight: 400;
+  font-size: 2rem;
+  line-height: 3.4rem;
+  padding-bottom: 2rem;
+}
+.prev-button {
+  flex: 1;
+}
+
+/*************
+AUTHOR
+*************/
+.author-container {
+  background-color: #e9f9ee;
+  box-shadow: 0px 5px 4px 0px #00000012;
+  position: relative;
+  z-index: 10;
+  /* background-color: red; */
+}
+.author-container h2 {
+  text-align: center;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  padding: 4.2rem 0 3.9rem 0;
+  font-weight: 600;
+  font-size: 2.8rem;
+}
+/****TECH GUY******/
+.img-social-flex {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.3rem;
+  padding-bottom: 5rem;
+}
+.social-text h3 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 500;
+  font-size: 2.4rem;
+  letter-spacing: 0%;
+  line-height: 2.8rem;
+  padding: 3rem 0 1rem 0;
+}
+
+.author-img {
+  max-width: 11.7rem;
+  height: 13.5rem;
+  padding-top: 1rem;
+}
+.social {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+.twitter-x {
+  max-height: 3.5rem;
+}
+.linkedin {
+  max-height: 5rem;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 768px) {
+  .early-days-cont p {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+  .author-container {
+    margin-top: 5rem;
+  }
+
+  .img-social-flex {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+  .early-days-flex {
+    width: 100vw;
+  }
+
+  .early-days-flex {
+    margin-top: 0;
+    /* padding-bottom: 0; */
+    /* background-color: red; */
+    display: grid;
+    gap: 2rem;
+    max-width: 90vw;
+    text-align: center;
+    justify-content: center;
+  }
+  .cont-button h2 {
+    font-size: 1.6rem;
+  }
+  .spantext {
+    font-size: 1.6rem;
+  }
+  .early-days-p {
+    font-size: 1.6rem;
+  }
+  .early-days-h1 {
+    font-size: 2rem;
+  }
+
+  .cont-reading {
+    margin: auto;
+    margin-top: 2rem;
+    margin-bottom: 0rem;
+
+    font-size: 1.2rem;
+  }
+  .previous {
+    font-size: 1.2rem;
+    justify-self: center;
+  }
+
+  .author-section .guide-footer img {
+    visibility: hidden;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .early-days-cont p {
+    max-width: 90vw;
+    margin: 0 auto;
+  }
+  .early-days-flex {
+    width: 100vw;
+  }
+  .author-section .guide-footer img {
+    display: none;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 959px) {
+  .author-section .guide-footer {
+    padding-left: 0;
+  }
+}

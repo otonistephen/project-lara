@@ -1,0 +1,64 @@
+/**********************
+TOGGLE ICON
+***********************/
+
+.toggle {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-right: 0.4rem;
+}
+
+.day-night-icon {
+  width: 1.8rem;
+  height: 1.8rem;
+  /* opacity: 0.5; Dimmed opacity for inactive icons */
+  transition: opacity 0.3s ease;
+}
+
+.day-night-icon.active {
+  opacity: 1; /* Full opacity for active icons */
+  filter: invert(1); 
+  
+}
+
+.toggle-btn {
+  position: relative;
+  display: block;
+  width: 4.6rem;
+  height: 2.9rem;
+  border-radius: 2.9rem;
+  background: #fff;
+  border: solid black 0.4rem;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.toggle-btn .indicator {
+  position: absolute;
+  top: 0.25rem;
+  left: 0.4rem;
+  width: 1.6rem;
+  height: 1.6rem;
+  background-color: black;
+  border-radius: 50%;
+  transform: scale(0.9);
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.toggle-btn.active .indicator {
+  left: 1.8rem;
+  background: #fff;
+}
+
+.toggle-btn.active {
+  border: solid #fff 0.4rem;
+  background-color: black;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+
+
+

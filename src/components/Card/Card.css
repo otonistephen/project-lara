@@ -1,0 +1,165 @@
+/* ******************************
+CARD SECTION
+********************************/
+
+.card-box {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  /* grid-template-columns: repeat(4, minmax(200px, 1fr)); */
+  /* justify-content: center; */
+  gap: 4rem;
+  max-width: 118rem;
+  margin-left: 6rem;
+  padding-top: 2.9rem;
+  margin-right: 6rem;
+}
+.card:hover {
+  background-color: #f3f2ff;
+  box-shadow: 4px 3px 10px 4px #00000012;
+}
+
+.card {
+  max-width: 28rem;
+  background-color: #fefefe;
+  /* margin-top: -5.7rem; */
+  border-radius: 15px;
+  /* box-shadow: 4px 3px 10px 4px #00000012; */
+  list-style: none;
+}
+
+.card a {
+  text-decoration: none;
+  color: #2c3238;
+}
+.card img {
+  max-width: 70%;
+  /* height: 21rem; */
+  height: 11.563rem;
+  margin: 0 auto;
+  display: flex;
+  margin-top: 6.4rem;
+
+  margin-bottom: 5.898rem;
+}
+
+.card p {
+  font-size: 2rem;
+  text-align: center;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 2.266rem;
+  margin-bottom: 5.8rem;
+  color: #2c3238;
+}
+.card-next-btn,
+.card-previous-btn {
+  max-width: 5rem;
+  display: none;
+}
+
+/*  */
+
+/* Mobile: Show only one card at a time, stack vertically */
+
+@media (max-width: 768px) {
+  .card-container {
+    margin: 0 auto;
+    position: relative;
+  }
+  .card-box {
+    display: flex;
+    flex-direction: row;
+    /* overflow: hidden; */
+    padding: 0;
+    gap: 0;
+    justify-content: center;
+  }
+  .card.dark:hover {
+  background-color: #272727;
+  box-shadow: 0 0 0 0.5rem green;
+  
+}
+
+  .card {
+    flex: 0 0 100%;
+    /* max-width: 100vw; */
+    margin: 0;
+    display: none;
+    transition: opacity 0.3s;
+    width: 70vw;
+    
+  }
+  .card p{
+    width: 20rem;
+    margin: 0 auto;
+    margin-bottom: 5.8rem;
+
+  }
+
+  .card.active {
+    display: block; 
+
+  }
+
+  .carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 1.5rem 0 0 0;
+  }
+
+  .dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .carousel-dots .dot.active {
+    background-color: #a0dbb899;
+  }
+  .card-next-btn,
+  .card-previous-btn {
+    max-width: 7vw;
+    display: unset;
+    opacity: 0.4;
+    position: absolute;
+    top: 12rem;
+    cursor: pointer;
+  }
+  .card-next-btn{
+    right: 1rem;
+  }
+
+}
+
+/* Hide dots on desktop */
+@media (min-width: 769px) {
+  .carousel-dots {
+    display: none;
+  }
+  .card-box .card {
+    display: block;
+  }
+}
+@media (min-width: 768px) and (max-width: 1024px) {
+  .card-box {
+    grid-template-columns: 1fr 1fr;
+  }
+  .card-container {
+    margin: 0 auto;
+  }
+
+  .hero-bottom-flex .dot-img {
+    display: none;
+  }
+}
+@media(min-width: 819px) and (max-width: 1024px){
+  .card p{
+    width: 20rem;
+    margin: 0 auto;
+    margin-bottom: 5.8rem;
+  }
+}

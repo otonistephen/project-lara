@@ -1,0 +1,170 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.nav-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 11.4rem;
+  padding: 0 4rem 0 13rem;
+  margin: 0 auto;
+  background-color: #fefefe;
+  z-index: 2;
+  color: #19241d;
+  box-shadow: 0px 3px 4px 0px #00000012;
+}
+.nav-menu {
+  display: flex;
+  gap: 4rem;
+  align-items: center;
+}
+nav {
+  display: flex;
+  gap: 8.8rem;
+}
+.nav-bar ul li {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 1.9rem;
+  line-height: 2.268rem;
+  font-weight: 400;
+  text-decoration: none;
+  /* color: #19241d; */
+  list-style: none;
+  cursor: pointer;
+}
+.logo {
+  font-size: 4.966rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-weight: 400;
+  text-decoration: none;
+  /* color: #19241d; */
+  cursor: pointer;
+}
+.menu-icon {
+  display: none;
+}
+.home-hidden {
+  display: none;
+}
+.dark-mode-mobile {
+  display: none;
+}
+/* MOBILE RESPONSIVENESS */
+/*
+@media (max-width: 768px) {
+ .nav-bar {
+    padding: 0 2rem;
+    height: 8rem;
+  }
+
+  .nav-menu {
+    display: none;
+    flex-direction: column;
+    position: absolute;
+    top: 8rem;
+    left: 0;
+    width: 100%;
+    transition: left 0.3s ease-in-out;
+    background-color: #fefefe;
+    padding: 2rem;
+    box-shadow: 0px 3px 4px 0px #00000012;
+  }
+
+  .nav-menu.show {
+    display: flex;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  nav {
+    gap: 2rem;
+  } 
+}
+*/
+@media (max-width: 393px) {
+  .logo {
+    font-size: 3rem !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .nav-bar {
+    padding: 0 2rem;
+    height: 8rem;
+  }
+  .logo {
+    font-size: 3.6rem;
+  }
+  .dark-mode-mobile {
+    display: block;
+
+    margin-bottom: -0.77rem;
+  }
+  .nav-menu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 0;
+    right: 100%; /* adjust this value to match the width of your menu */
+    height: 100vh;
+    width: 100vw; /* adjust this value to match the width of your menu */
+    background-color: #fefefe;
+    padding: 2rem;
+    box-shadow: 0px 3px 4px 0px #00000012;
+    transition: right 0.3s ease-in-out;
+    z-index: 1000; 
+    align-items: unset;
+    padding-left: 2.5rem;
+    /* margin: 2rem; */
+    transition: transform 0.3s ease-in-out; /* this is to remove the transition *NB i will look at it agaian**/
+    
+  }
+
+  /* .nav-menu:not(.show){ 
+    transition: none; 
+  } */
+  .nav-menu.show {
+    right: 0;
+  }
+
+  .nav-menu.show {
+    transform: translateX(0);
+    /* background-color: red; */
+  }
+  .mobile-nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    
+  }
+
+  .menu-icon {
+    display: block;
+    margin-top: 0.5rem;
+  }
+
+  nav {
+    gap: 2rem;
+  }
+  .home-hidden {
+    display: block;
+  }
+  .nav-bar.dark .menu-icon img {
+    filter: invert();
+  }
+  .nav-bar.dark .show {
+    background-color: #19241d;
+  }
+  .nav-menu.show .menu-icon {
+    margin-top: 1rem;
+  }
+  .nav-bar {
+    display: flex;
+    align-items: center;
+  }
+}

@@ -1,0 +1,361 @@
+.guide-section {
+  /* background-color: #e7e6e6; */
+  box-shadow: 0px 5px 4px 0px #00000012;
+  position: relative;
+  z-index: 10;
+  /* background-color: #ffffff; */
+  /* max-height: 90.9rem; */
+}
+
+.guide-grid {
+  /* background-color: #ffffff; */
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  padding: 2rem 13.2rem 0 12.1rem;
+  gap: 2rem;
+}
+
+/* .hidden {
+  display: none; 
+}  */
+
+.guide-flex {
+  display: flex;
+  gap: 2.2rem;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.grid {
+  padding-top: 2.3rem;
+  padding-left: 0.5rem;
+  height: 22.9rem;
+  color: #a4a4a4;
+}
+
+.grid-link:link,
+.grid-link:visited {
+  text-decoration: none;
+  color: #a4a4a4;
+}
+.grid.active {
+  box-shadow: inset 0px 5px 0px 0px #263238;
+  font-weight: 800;
+  color: #343434;
+}
+
+.guide-h4 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 2.3rem;
+  font-weight: 800;
+  /* line-height: 1.512rem; */
+  letter-spacing: 0.1em;
+  /* color: #343434; */
+}
+.guide-h2.active {
+  font-weight: 600;
+}
+.guide-h4.active {
+  font-weight: 900;
+  font-size: 2.3rem;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.time-p.active {
+  font-weight: 700;
+}
+
+.guide-flex p {
+  font-size: 1.3rem;
+  font-weight: 500;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+}
+.guide-text h2 {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  max-width: 36rem;
+  font-size: 2.8rem;
+  font-weight: 400;
+  line-height: 3.5rem;
+  margin-bottom: 1.9rem;
+
+  /* color: #343434; */
+}
+/* .guid-text h2:hover {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  max-width: 36rem;
+  font-size: 2.8rem;
+  font-weight: 500;
+  line-height: 3.5rem;
+  margin-bottom: 1.9rem;
+} */
+.guide-text p {
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 1.7rem;
+  font-weight: 400;
+  line-height: 2.1rem;
+  max-width: 32.5rem;
+
+  /* color: #19241d; */
+}
+
+.btn {
+  display: inline-block;
+  /* margin: 15.2rem 0 5.6rem 13rem; */
+  margin-left: 10rem;
+  margin-bottom: 5.6rem;
+  margin-top: 6.1rem;
+  font-size: 1.6rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: 2px solid #a0dbb8;
+  background-color: #ebf7f0;
+  color: #343434;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  letter-spacing: 0.2rem;
+  padding-right: none;
+  line-height: 2.016rem;
+  padding: 2rem 0 2.1rem 2.3rem;
+  grid-column: 4 / 3;
+
+  /* grid-column: 4 /  3; */
+  max-width: 26.1rem;
+}
+.btn span {
+  padding-left: 1.5rem;
+  padding-right: 2.3rem;
+}
+
+.button-container {
+  
+  display: none;
+}
+
+/* @media (min-width: 769px) and (max-width: 1291px){
+  .btn{
+     padding: 1.4rem 0rem 1.5rem 1rem;
+     background-color: red;
+  }
+} */
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .guide-grid {
+    max-width: 80vw !important;
+    display: block;
+
+    /* padding: 0; */
+    margin: 0 auto;
+  }
+  .grid {
+    color: #343434;
+    padding-left: 0;
+    display: none;
+    margin-top: 2rem;
+    width: 80vw;
+  }
+
+  .grid.active {
+    box-shadow: none;
+    display: block;
+  }
+
+  .grid.active.dark {
+    box-shadow: none;
+  }
+  .guide-carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 1.5rem 0 0 0;
+  }
+
+  .guide-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .dot.active {
+    background-color: #666;
+  }
+  .guide-carousel-dots .guide-dot.active {
+    background-color: #a0dbb899;
+    width: 3.2rem;
+    border-radius: 1rem;
+  }
+
+  .guide-h4.active {
+    font-weight: 800;
+    margin-right: 17rem;
+  }
+
+  .guide-h2.active {
+    font-weight: 500;
+    font-size: 2.4rem;
+  }
+  .btn {
+    margin-left: 0;
+  }
+}
+
+/* MOBILE PHONES */
+@media (max-width: 768px) {
+  .grid.active {
+    box-shadow: none;
+    display: block;
+  }
+
+  .grid.active.dark {
+    box-shadow: none;
+  }
+  .guide-carousel-dots {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin: 1.5rem 0 0 0;
+  }
+  .guide-dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: none;
+    background-color: #ccc;
+    cursor: pointer;
+    transition: background 0.3s;
+  }
+
+  .dot.active {
+    background-color: #666;
+  }
+  .guide-carousel-dots .guide-dot.active {
+    background-color: #a0dbb899;
+    width: 3.2rem;
+    border-radius: 1rem;
+  }
+  .grid {
+    color: #343434;
+    padding-left: 0;
+    display: none;
+    margin-top: 2rem;
+  }
+  .guide-grid {
+    display: block;
+    padding: 0;
+    /* max-width: 36rem; */
+    max-width: 70vw;
+   
+    margin: 0 auto;
+    /* background-color: green; */
+  }
+
+  .guide-h4.active {
+    font-size: max(3vw, 1.2rem);
+    font-weight: 800;
+    margin-right: 7rem;
+  }
+  .guide-h2.active {
+    font-weight: 500;
+    font-size: max(4vw, 2.4rem);
+  }
+  .guide-text p {
+    font-size: max(2.5vw, 1.6rem);
+  }
+   .time-p{
+    font-size: max(2vw, 1.2rem)!important;
+    background-color: white;
+  }
+  .guide-flex img{
+    width: 0.7rem;
+  }
+  .btn {
+    font-weight: 700;
+    font-size: 1.6rem;
+    padding: 1.4rem 2rem 1.5rem 2.1rem;
+    margin-left: 0rem;
+  }
+  .arrow-right {
+    display: none;
+  }
+  .button-container {
+    display: unset;
+  }
+}
+
+/* @media (min-width: 768px) {
+  .guide-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 2rem 13.2rem 0 12.1rem;
+    gap: 2rem;
+  }
+  .grid {
+    display: block !important;
+  }
+} */
+
+@media (min-width: 360px) and (max-width: 400px) {
+  .btn {
+    margin-left: 0;
+  }
+  
+  .guide-h4{
+  background-color: rgb(231, 224, 224);
+  margin-right: 3rem!important;
+  }
+}
+@media (max-width: 1024px) {
+  .button-container {
+    position: relative;
+    display: unset;
+  }
+  .dem-previous-btn,
+  .dem-next-btn {
+    max-width: 7vw;
+    opacity: 0.4;
+    position: absolute;
+    bottom: 20rem;
+    cursor: pointer;
+  }
+}
+
+@media (max-width: 768px) {
+  .dem-next-btn{
+    left: 72vw;
+  }
+  .dem-previous-btn{
+    right: 3vw;
+  }
+}
+@media(min-width: 820px) and (max-width: 900px) {
+  .guide-flex h4{
+    background-color: purple;
+  }
+}
+
+@media(min-width: 768px) and (max-width: 1024px){
+  
+  .dem-next-btn{
+    left: 60vw;
+  }
+  .dem-previous-btn{
+    right: 3vw;
+  }
+}
+@media(min-width: 1024px) and (max-width: 1173px){
+  
+  .guide-flex h4.active, .guide-flex h4{
+    font-size: 1.5rem;
+    }
+    .guide-text h2{
+      font-size: x-large;
+    }
+  }
+
+  @media(min-width: 1024px) and (max-width: 1280px){
+.btn{
+    margin-left: 0;
+  }
+  }
+  
