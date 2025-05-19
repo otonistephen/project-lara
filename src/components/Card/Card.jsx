@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 import './Card.css';
 import { images } from '../../assets/images';
 
@@ -43,6 +43,38 @@ const cardDatas = [
 const Card = ({ isDarkMode }) => {
   const [firstData, setDarkModeData] = useState(cardData);
   const [currentIndex, setCurrentIndex] = useState(0);
+  const cardRef = useRef(null);
+  const [touchStartX, setTouchStartX] = useState(0);
+
+  const handleTouchStart = e => {
+    setTouchStartX(e.touches[0].clientx);
+  };
+  const handleTouchMove = e => {
+    const touchMoveX = e.touches[0].clientX;
+    const diff = touchStartX - touchMoveX;
+
+    if (diff > 50) {
+      handleNext();
+      setTouchStartX(0);
+    } else if (diff < -50) {
+      handlePrev();
+      setTouchStartX(0);
+    }
+  };
+
+  useEffect(() => {
+    if (cardRef.current) {
+      cardRef.current.addEventListener('touchstart', handleTouchStart);
+      cardRef.current.addEventListener('touchmove', handleTouchMove);
+    }
+
+    return () => {
+      if (cardRef.current) {
+        cardRef.current.removeEventListener('touchstart', handleTouchStart);
+        cardRef.current.removeEventListener('touchmove', handleTouchMove);
+      }
+    };
+  }, [handleTouchStart, handleTouchMove]);
 
   useEffect(() => {
     setDarkModeData(isDarkMode ? cardDatas : cardData);
@@ -69,21 +101,14 @@ const Card = ({ isDarkMode }) => {
     <div className='card-container'>
       {/* Desktop: Grid, Mobile: Carousel */}
 
-      <ul className='card-box'>
+      <ul className='card-box' ref={cardRef}>
         {firstData.map((card, index) => (
           <li
             key={index}
             className={`card ${isDarkMode ? 'dark' : ''} ${
               index === currentIndex ? 'active' : ''
             }`}
-            // style={{
-            //   display:
-            //     window.innerWidth <= 768
-            //       ? index === currentIndex
-            //         ? 'block'
-            //         : 'none'
-            //       : undefined,
-            // }}
+            style={{transform: `translateX(${index === currentIndex ? 0 : 100}%)`, transition: '0.5s'}}
           >
             <img
               src={card.photoName}

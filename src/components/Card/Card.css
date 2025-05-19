@@ -72,6 +72,7 @@ CARD SECTION
     padding: 0;
     gap: 0;
     justify-content: center;
+    transition: tranform 0.5s;
   }
   .card.dark:hover {
   background-color: #272727;
