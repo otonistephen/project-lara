@@ -20,11 +20,8 @@
 /* MOBILE RESPONSIVENESS */
 
 
-@media (max-width: 393px){
-  .footer-body-flex img{
-    width: 0vw;
-  }
-}
+
+ 
 
 
 @media(max-width: 768px){
@@ -51,11 +48,11 @@
     margin: 0 auto;
     font-size: 1.4rem;
     font-weight: 400;
-   
+   text-align: center;
   }
   .footer-body-flex img{
-   margin-bottom: 10.6rem;
-    margin-top: -14rem;
+  
+    display: none;
   }
 
 }
@@ -66,14 +63,7 @@
   .footer-body-flex{
     position: relative;
   }
-  .footer-body-flex img{
-    position: absolute;
-    right: 0;
-    bottom: 0;
-    top: 29rem;
-    margin-bottom: 10.6rem;
-   
-  }
+  
   .footer-body-flex {
     padding-left: 0;
     

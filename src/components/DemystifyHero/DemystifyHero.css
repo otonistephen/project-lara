@@ -24,7 +24,6 @@
   z-index: 1;
   transition: all 500ms ease-in-out;
   height: 9.3rem;
-  
 }
 
 /* .head-dem.sticky {
@@ -81,12 +80,16 @@
 .dem-menu-container.sticky {
   position: fixed;
   width: 144rem;
-  top: 0;
+
+  top: -2rem;
+
   /* z-index: 1; */
   /*transition: all 500ms ease-in-out;*/
   /* height: 9.3rem; */
   background-color: #fefefe;
   z-index: 1;
+  padding-top: 2.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .dem-menu {
@@ -103,7 +106,6 @@
   display: flex;
   margin: auto;
   padding-top: 2.2rem;
-  
 }
 /* .dem-img{
   margin-bottom: 1.7rem;
@@ -132,56 +134,56 @@
     max-width: 90vw;
     margin: 0 auto;
   }
-   /* .header-dem{
+  /* .header-dem{
      background-color: #e9f9ee;
    } */
-  .header-dem.sticky{
+  .header-dem.sticky {
     max-width: 100%;
   }
   .header-dem-h2 {
     font-size: 1.6rem;
     width: 16rem;
     text-align: center;
-   
   }
-  .views-count{
+  .views-count {
     font-size: 1.2rem;
   }
   .dem-p {
     font-size: 1.2rem;
     max-width: 6.9rem;
-    
   }
-  .dem-img img{
+  .dem-img img {
     width: 22rem;
   }
-  
+
   .dem-menu {
     display: grid;
     grid-template-columns: 1fr 1fr;
     max-width: 90vw;
     margin: 0 auto;
-   
   }
-  .dem-menu-container.sticky{
+  .dem-menu-container.sticky {
     max-width: 100%;
   }
   .dem-menu li {
-    font-size: 1.3rem;
+    font-size: 1.3em;
     padding: 0;
     font-weight: 500;
-    padding: 1rem;
+    padding-left: 1vw;
+    padding-right: 1vw;
+    padding-top: 2vh;
+    padding-bottom: 2vh;
     text-align: center;
     width: unset;
   }
 }
-@media(min-width: 768px) and (max-width: 1024px){
+@media (min-width: 768px) and (max-width: 1024px) {
   .head-dem {
     max-width: 90vw;
     margin: 0 auto;
   }
-  
-  .header-dem.sticky{
+
+  .header-dem.sticky {
     max-width: 100%;
   }
   .header-dem-h2 {
@@ -193,14 +195,12 @@
     font-weight: 500;
     text-align: center;
     padding: 1rem;
-  
   }
-  .dem-menu{
+  .dem-menu {
     max-width: 90vw;
-   margin: 0 auto;
+    margin: 0 auto;
   }
-  .dem-menu-container.sticky{
+  .dem-menu-container.sticky {
     max-width: 100%;
   }
-  
 }

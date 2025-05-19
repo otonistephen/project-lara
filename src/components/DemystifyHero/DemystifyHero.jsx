@@ -4,7 +4,6 @@ import './DemystifyHero.css';
 import { images } from '../../assets/images';
 import DemystifyArticles from '../DemystifyArticles/DemystifyArticles';
 
-
 const demystifyContent = [
   {
     menu: 'The Early Days',
@@ -42,7 +41,6 @@ const demystifyContent = [
 ];
 
 const DemystifyHero = ({ isDarkMode }) => {
-  
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -54,7 +52,6 @@ const DemystifyHero = ({ isDarkMode }) => {
   );
 
   const [isHeaderSticky, setIsHeaderSticky] = useState(false);
-  
   const [isMenuSticky, setIsMenuSticky] = useState(false);
 
   const handleMenuClick = category => {
@@ -62,41 +59,97 @@ const DemystifyHero = ({ isDarkMode }) => {
     setFilteredDemystify(
       demystifyContent.filter(item => item.menu === category)
     );
-     navigate(`?category=${category}`); 
+    navigate(`?category=${category}`);
   };
+
+  const [demMenuTopState, setDemMenuTopState] = useState(null);
+
   useEffect(() => {
+    const demMenuContainer = document.querySelector('.dem-menu-container');
+    if (demMenuContainer) {
+      setDemMenuTopState(demMenuContainer.offsetTop);
+    }
+  }, []);
+
+  useEffect(() => {
+    //    const handleScroll = () => {
+    //   const navbarHeight = 114; // Assuming navbar height is 114px
+    //   const demMenuContainer = document.querySelector('.dem-menu-container');
+    //   const heroCont = document.querySelector('.dem-hero');
+    //   const heroHeight = heroCont.offsetHeight
+    //   if (demMenuContainer) {
+    //     const demMenuTop = demMenuContainer.offsetHeight;
+    //     const demMenuHeight = demMenuContainer.offsetHeight;
+    //     const heroHeight = demMenuTop - demMenuHeight;
+
+    //     if (!demMenuTop) return;
+
+    //     const menuTop = demMenuTop - navbarHeight;
+    //     if (window.scrollY >= menuTop) {
+    //        setIsMenuSticky(true);
+
+    //     } else {
+    //       setIsMenuSticky(false);
+
+    //     }
+
+    //     if (window.scrollY > navbarHeight && window.scrollY < demMenuTop) {
+    //       setIsHeaderSticky(true);
+    //     } else {
+    //       setIsHeaderSticky(false);
+    //     }
+
+    //     if (window.scrollY > demMenuTop) {
+    //       setIsMenuSticky(true);
+    //     } else {
+    //       setIsMenuSticky(false);
+    //     }
+    //   }
+    // };
+
+    // const handleScroll = () => {
+    //   const demMenuContainer = document.querySelector('.dem-menu-container');
+    //   const headerDem = document.querySelector('.header-dem');
+
+    //   if (demMenuContainer && headerDem) {
+    //     const rect = demMenuContainer.getBoundingClientRect();
+    //     const headerHeight = headerDem.offsetHeight;
+    //     if (rect.top <= headerHeight) {
+    //       setIsMenuSticky(true);
+    //     } else {
+    //       setIsMenuSticky(false);
+    //     }
+
+    //   }
+    // };
+    //     const handleScroll = () => {
+    //   const demMenuContainer = document.querySelector('.dem-menu-container');
+    //   const headerDem = document.querySelector('.header-dem');
+
+    //   if (demMenuContainer && headerDem) {
+    //     const rect = demMenuContainer.getBoundingClientRect();
+    //     const demMenuTop = demMenuContainer.offsetTop;
+    //     const headerHeight = headerDem.offsetHeight;
+    //     if (window.scrollY > demMenuTop) {
+    //       setIsMenuSticky(true);
+    //     } else {
+    //       setIsMenuSticky(false);
+    //     }
+    //   }
+    // };
     const handleScroll = () => {
-      const navbarHeight = 114; // Assuming navbar height is 114px
-
-      const demMenuTop = document.querySelector(
-        '.dem-menu-container'
-      ).offsetTop;
-
-     
-
-      if (!demMenuTop) return;
-
-      
-
-      // Make header sticky until hero section ends
-      if (window.scrollY > navbarHeight && window.scrollY < demMenuTop) {
-        setIsHeaderSticky(true);
-      } else {
-        setIsHeaderSticky(false);
-      }
-
-      // Make the dem-menu-container sticky
-
-      if (window.scrollY > demMenuTop) {
-        setIsMenuSticky(true);
-      } else {
-        setIsMenuSticky(false);
+      if (demMenuTopState !== null) {
+        if (window.scrollY > demMenuTopState) {
+          setIsMenuSticky(true);
+        } else {
+          setIsMenuSticky(false);
+        }
       }
     };
 
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+  }, [demMenuTopState]);
 
   useEffect(() => {
     const searchParams = new URLSearchParams(location.search);
@@ -132,6 +185,7 @@ const DemystifyHero = ({ isDarkMode }) => {
         </div>
         <div className={`dem-menu-container ${isMenuSticky ? 'sticky' : ''}`}>
           <ul className='dem-menu'>
+            {/* Menu items with dynamic active state */}
             {demystifyContent.map(item => (
               <li
                 key={item.menu}
@@ -144,12 +198,11 @@ const DemystifyHero = ({ isDarkMode }) => {
           </ul>
         </div>
       </div>
-     
+      {/* Render filtered articles */}
       <DemystifyArticles
         filteredDemystify={filteredDemystify}
         activeArticle={activeArticle}
       />
-      
     </div>
   );
 };
