@@ -14,8 +14,7 @@ const DemystifyArticles = ({ filteredDemystify, activeArticle }) => {
           </p>
           <p className='early-days-p'>{card.content}</p>
 
-          <div className={`early-days-flex ${card.btnNext ? '':'active'}`}>
-            
+          <div className={`early-days-flex ${card.btnNext ? '' : 'active'}`}>
             {card.btnPrev && (
               <div
                 className={`prev-button ${
@@ -31,15 +30,6 @@ const DemystifyArticles = ({ filteredDemystify, activeArticle }) => {
                 </button>
               </div>
             )}
-            {/* {card.btnNext && (
-              <div className='cont-button'>
-                <h2>{card.contBtnTitle}</h2>
-                <button className='cont-reading'>
-                  {card.btnNext}{' '}
-                  <img src={images.arrowright} alt={images.arrowright} />
-                </button>
-              </div>
-            )} */}
 
             {card.btnNext ? (
               <div className='cont-button'>
@@ -49,7 +39,6 @@ const DemystifyArticles = ({ filteredDemystify, activeArticle }) => {
                   <img src={images.arrowright} alt={images.arrowright} />
                 </button>
               </div>
-              
             ) : (
               <div className='author-section'>
                 <div className='author-container'>
@@ -78,43 +67,10 @@ const DemystifyArticles = ({ filteredDemystify, activeArticle }) => {
                     </div>
                   </div>
                 </div>
-                 <GuideFooter />
+                <GuideFooter />
               </div>
             )}
           </div>
-
-          {/* {card.btnNext || (
-            <div className='author-section'>
-              <div className='author-container'>
-                <h2>Author</h2>
-                <div className='img-social-flex'>
-                  <div className='author-img'>
-                    <img src={images.tech_guy_img} alt='tech-guy-img' />
-                  </div>
-                  <div className='social-text'>
-                    <h3>
-                      Nyior <br />
-                      Clement
-                    </h3>
-                    <div className='social'>
-                      <img
-                        src={images.x_twitter}
-                        alt='x-twitter'
-                        className='twitter-x'
-                      />
-                      <img
-                        src={images.linkedin_58}
-                        alt='linkedin'
-                        className='linkedin'
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <GuideFooter />
-            </div>
-          )} */}
         </div>
       ))}
     </div>

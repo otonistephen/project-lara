@@ -56,7 +56,6 @@ HERO SECTION
     padding-right: 8.1rem;
   }
   .hero-top {
-    width: 43rem;
     padding: 0;
    
     margin: 0 auto;
@@ -101,10 +100,7 @@ HERO SECTION
   }
 }
 @media(max-width: 393px){
-  .hero-top {
-    width: 40rem;
   
-  }
   .hero-top h1{
     margin: 0 auto;
     font-size: 6vw;

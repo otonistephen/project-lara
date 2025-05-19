@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import './HomeGuideCard.css';
 import { images } from '../../assets/images';
-import { Link, Links } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 const hiddenText = [
   {
@@ -45,20 +45,22 @@ const HomeGuideCard = ({ setImageSrc, isDarkMode }) => {
     window.scrollTo({ top: 0, behavior: 'auto' });
     setFirstIndex(0);
   };
-  const mobileDisplay = () => {
-    if (window.innerWidth <= 768) {
-      index === firstIndex ? 'active' : '';
-    }
-  };
-   const handlePrev = () => {
-    setFirstIndex((firstIndex - 1 + hiddenText.length) % hiddenText.length);
-  };
+
   const handleNext = () => {
-    setFirstIndex((firstIndex + 1) % hiddenText.length);
+    const newIndex = (firstIndex + 1) % hiddenText.length;
+    setFirstIndex(newIndex);
+    setHovered(hiddenText[newIndex].div);
+    setImageSrc(hiddenText[newIndex].image);
+  };
+  const handlePrev = () => {
+    const newIndex = (firstIndex - 1 + hiddenText.length) % hiddenText.length;
+    setFirstIndex(newIndex);
+    setHovered(hiddenText[newIndex].div);
+    setImageSrc(hiddenText[newIndex].image);
   };
 
   return (
-    < div className='gruide-container'>
+    <div className='gruide-container'>
       <div className='guide-carousel-dots'>
         {hiddenText.map((item, idx) => (
           <button
@@ -82,15 +84,8 @@ const HomeGuideCard = ({ setImageSrc, isDarkMode }) => {
             key={index}
             className={`grid ${item.div} ${
               hovered === item.div ? 'active' : ''
-            } ${isDarkMode ? 'dark' : ''} ${mobileDisplay}`}
-            // style={{
-            //   display:
-            //     window.innerWidth <= 768
-            //       ? index === firstIndex
-            //         ? 'block'
-            //         : 'none'
-            //       : undefined,
-            // }}
+            } ${isDarkMode ? 'dark' : ''} `}
+            
             onMouseEnter={() => {
               setImageSrc(item.image); // Update the image source on hover
               setHovered(item.div); // Set the hovered state
@@ -118,23 +113,22 @@ const HomeGuideCard = ({ setImageSrc, isDarkMode }) => {
               </div>
             </Link>
           </div>
-          
         ))}
         <div className='button-container'>
           <img
-          src={images.previous}
-          alt='previous'
-          className='dem-previous-btn'
-          onClick={handlePrev}
-        />
-        <img
-          src={images.next}
-          alt='next'
-          className='dem-next-btn'
-          onClick={handleNext}
-        />
+            src={images.previous}
+            alt='previous'
+            className='dem-previous-btn'
+            onClick={handlePrev}
+          />
+          <img
+            src={images.next}
+            alt='next'
+            className='dem-next-btn'
+            onClick={handleNext}
+          />
         </div>
-        
+
         <a href='#' className={`btn ${isDarkMode ? 'dark' : ''}`}>
           SEE ALL GUIDES
           <span className={`arrow-right ${isDarkMode ? 'dark' : ''}`}>

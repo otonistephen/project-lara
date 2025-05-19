@@ -103,6 +103,7 @@
   display: flex;
   margin: auto;
   padding-top: 2.2rem;
+  
 }
 /* .dem-img{
   margin-bottom: 1.7rem;
@@ -139,12 +140,22 @@
   }
   .header-dem-h2 {
     font-size: 1.6rem;
-    width: 18.1rem;
+    width: 16rem;
+    text-align: center;
+   
+  }
+  .views-count{
+    font-size: 1.2rem;
   }
   .dem-p {
     font-size: 1.2rem;
     max-width: 6.9rem;
+    
   }
+  .dem-img img{
+    width: 22rem;
+  }
+  
   .dem-menu {
     display: grid;
     grid-template-columns: 1fr 1fr;

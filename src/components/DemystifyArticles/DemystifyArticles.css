@@ -134,14 +134,20 @@ AUTHOR
   }
   .author-container {
     margin-top: 5rem;
+  
+  }
+  .author-section{
+    
   }
 
   .img-social-flex {
     max-width: 90vw;
     margin: 0 auto;
+    
   }
   .early-days-flex {
     width: 100vw;
+    
   }
 
   .early-days-flex {
@@ -158,10 +164,11 @@ AUTHOR
     font-size: 1.6rem;
   }
   .spantext {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
   }
   .early-days-p {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
+
   }
   .early-days-h1 {
     font-size: 2rem;
@@ -171,7 +178,6 @@ AUTHOR
     margin: auto;
     margin-top: 2rem;
     margin-bottom: 0rem;
-
     font-size: 1.2rem;
   }
   .previous {

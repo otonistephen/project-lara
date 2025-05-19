@@ -257,14 +257,18 @@
   }
   .guide-h2.active {
     font-weight: 500;
-    font-size: max(4vw, 2.4rem);
+    font-size: max(4vw, 2.2rem);
+    
   }
   .guide-text p {
     font-size: max(2.5vw, 1.6rem);
+    margin-bottom: 2rem;
+   
+    line-height: 1.9rem;
   }
    .time-p{
     font-size: max(2vw, 1.2rem)!important;
-    background-color: white;
+    
   }
   .guide-flex img{
     width: 0.7rem;
@@ -295,13 +299,13 @@
   }
 } */
 
-@media (min-width: 360px) and (max-width: 400px) {
+@media  (max-width: 400px) {
   .btn {
     margin-left: 0;
   }
   
   .guide-h4{
-  background-color: rgb(231, 224, 224);
+ 
   margin-right: 3rem!important;
   }
 }
@@ -328,10 +332,11 @@
     right: 3vw;
   }
 }
+.wrapper.dark .button-container img{
+  filter: invert();
+}
 @media(min-width: 820px) and (max-width: 900px) {
-  .guide-flex h4{
-    background-color: purple;
-  }
+  
 }
 
 @media(min-width: 768px) and (max-width: 1024px){

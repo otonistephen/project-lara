@@ -20,9 +20,9 @@
 /* MOBILE RESPONSIVENESS */
 
 
-@media(min-width: 360px) and (max-width: 393px){
+@media (max-width: 393px){
   .footer-body-flex img{
-    width: 20vw;
+    width: 0vw;
   }
 }
 
@@ -37,6 +37,7 @@
     text-align: center;
     width: 100vw;
     margin-top: 13.9rem;
+    font-size: 2.5rem;
   
   }
   .hidden{
@@ -48,7 +49,7 @@
   .footer-body p{
     width: 90vw;
     margin: 0 auto;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     font-weight: 400;
    
   }

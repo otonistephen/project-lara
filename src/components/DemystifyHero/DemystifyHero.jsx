@@ -42,7 +42,7 @@ const demystifyContent = [
 ];
 
 const DemystifyHero = ({ isDarkMode }) => {
-  // const navigate = useNavigate();
+  
   const navigate = useNavigate();
   const location = useLocation();
 
@@ -54,7 +54,7 @@ const DemystifyHero = ({ isDarkMode }) => {
   );
 
   const [isHeaderSticky, setIsHeaderSticky] = useState(false);
-  // const [IsNavbarHidden, setIsNavbarHidden] = useState(false);
+  
   const [isMenuSticky, setIsMenuSticky] = useState(false);
 
   const handleMenuClick = category => {
@@ -72,29 +72,11 @@ const DemystifyHero = ({ isDarkMode }) => {
         '.dem-menu-container'
       ).offsetTop;
 
-      // const headerHeight = document.querySelector('.header-dem').offsetHeight;
-      // const demMenueHeight = document.querySelector(
-      //   '.dem-menu-container'
-      // ).offsetHeight;
-      // const heroHeight = demMenuTop - demMenueHeight;
+     
 
       if (!demMenuTop) return;
 
-      //Get distance from top of document to menu container
-
-      // const menuTop = demMenuTop.offsetTop - navbarHeight;
-      // if (window.scrollY >= menuTop) {
-      //   setIsMenuSticky(true);
-      // } else {
-      //   setIsMenuSticky(false);
-      // }
-
-      // Hide navbar when scrolled past header
-      // if (window.scrollY > navbarHeight) {
-      //   setIsNavbarHidden(true);
-      // } else {
-      //   setIsNavbarHidden(false);
-      // }
+      
 
       // Make header sticky until hero section ends
       if (window.scrollY > navbarHeight && window.scrollY < demMenuTop) {
@@ -150,7 +132,6 @@ const DemystifyHero = ({ isDarkMode }) => {
         </div>
         <div className={`dem-menu-container ${isMenuSticky ? 'sticky' : ''}`}>
           <ul className='dem-menu'>
-            {/* Menu items with dynamic active state */}
             {demystifyContent.map(item => (
               <li
                 key={item.menu}
@@ -163,7 +144,7 @@ const DemystifyHero = ({ isDarkMode }) => {
           </ul>
         </div>
       </div>
-      {/* Render filtered articles */}
+     
       <DemystifyArticles
         filteredDemystify={filteredDemystify}
         activeArticle={activeArticle}

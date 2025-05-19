@@ -211,11 +211,13 @@ ABOUT BOTTOM
     padding-left: 0;
   }
   .container p {
-    font-size: 1.6rem;
+    font-size: 1.3rem;
     font-weight: 400;
-    line-height: 170%;
+    
   }
-
+.grid-about-p{
+  font-size: 1.3rem;
+}
   .grid-about-h2 {
     max-width: 18.2rem;
     font-size: 2rem;
@@ -242,6 +244,7 @@ ABOUT BOTTOM
   }
   .grid-4 .grid-h22 {
     display: none;
+   
   }
 
   .grid-3 .grid-h22 {
@@ -261,6 +264,9 @@ ABOUT BOTTOM
 
   .grid-p2 {
     padding-bottom: 4.6rem;
+    
+    font-size: 1.3rem;
+    
   }
   .horizontal-line span:before {
     max-width: 45vw;
@@ -270,6 +276,8 @@ ABOUT BOTTOM
   }
   .tech-guy-img-p {
     max-width: 90vw;
+    font-size: 1.3rem;
+    
   }
 
   /* General styling for all the screen sizes */

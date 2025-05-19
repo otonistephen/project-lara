@@ -52,6 +52,7 @@
   letter-spacing: 0%;
   color: #19241d;
   margin-bottom: 1.9rem;
+  
 }
 .newsl-sub-p {
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -77,6 +78,10 @@
   }
   .newsletter-container h2 {
     font-size: 2rem;
+    text-align: left;
+  }
+  .newsletter-container p{
+    font-size: 1.6rem;
   }
   .newsletter-container {
     max-width: 90vw;
@@ -99,6 +104,7 @@
   .newsl-sub-h2 {
     font-size: 2rem;
     font-weight: 700;
+    
   }
   .newsletter-subscribe h2 {
     display: none;
@@ -130,4 +136,10 @@
   .newsletter-img img {
     max-width: 90vw;
   }
+}
+@media(max-width: 361px){
+  .newsletter-container h2{
+    font-size: 1.7rem;
+  }
+  
 }

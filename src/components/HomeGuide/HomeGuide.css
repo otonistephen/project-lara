@@ -14,21 +14,18 @@
   max-width: 39.159rem;
   height: 40rem;
   margin: 4.6rem 0 3.5rem 0;
-  
-  
 }
 
 /* MOBILE RESPONSIVENWSS */
-@media(max-width: 768px) {
-.guide-img img{
-  height: 30vh;
+@media (max-width: 450px) {
+  .guide-img img {
+    height: 30.43vh;
+  }
 }
+
+@media(min-width: 450px) and (max-width: 768px){
+  .guide-img img{
+    height: 40vh;
+    width: 80vw;
+  }
 }
-
-
-
-
-
-
-
-

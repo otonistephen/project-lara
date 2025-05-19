@@ -8,7 +8,7 @@
 
 html {
   font-size: 62.5%;
-  
+  overflow-x: hidden;
 }
 
 a {
@@ -18,13 +18,16 @@ a {
 body {
   line-height: 1;
   font-weight: 400;
-  background-color: #000000;
+  /* background-color: #000000; */
+  overflow-x: hidden;
+ 
   
 }
 .wrapper {
   max-width: 144rem;
   margin: 0 auto;
   background-color: #f6f6f6;
+overflow-x: hidden;
 }
 .header-primary {
   font-size: 3.2rem;
@@ -59,4 +62,5 @@ header {
     opacity: 1;
   }
 }
+
 
