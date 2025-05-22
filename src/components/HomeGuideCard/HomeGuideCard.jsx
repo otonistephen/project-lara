@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './HomeGuideCard.css';
 import { images } from '../../assets/images';
 import { Link } from 'react-router-dom';
+import { useSwipeable } from 'react-swipeable';
 
 const hiddenText = [
   {
@@ -39,6 +40,7 @@ const HomeGuideCard = ({ setImageSrc, isDarkMode }) => {
 
   useEffect(() => {
     setHovered('grid-1'); // Set the first grid as active on initial render
+    setFirstIndex(0);
   }, []);
   const handleMenuClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -59,8 +61,28 @@ const HomeGuideCard = ({ setImageSrc, isDarkMode }) => {
     setImageSrc(hiddenText[newIndex].image);
   };
 
+  const swipeHandlers = useSwipeable({
+    onSwipedLeft: () => {
+      // setFirstIndex(prev => (prev + 1) % hiddenText.length);
+      const newIndex = (firstIndex + 1) % hiddenText.length;
+      setFirstIndex(newIndex);
+      setHovered(hiddenText[newIndex].div);
+      setImageSrc(hiddenText[newIndex].image);
+    },
+    onSwipedRight: () => {
+      // setFirstIndex(prev => (prev - 1 + hiddenText.length) % hiddenText.length);
+      const newIndex = (firstIndex - 1 + hiddenText.length) % hiddenText.length;
+      setFirstIndex(newIndex);
+      setHovered(hiddenText[newIndex].div);
+      setImageSrc(hiddenText[newIndex].image);
+    },
+    delta: 2,
+    preventDefaultTouchmovementEvent: true,
+    trackTouch: true,
+  });
+
   return (
-    <div className='gruide-container'>
+    <div className='gruide-container' {...swipeHandlers}>
       <div className='guide-carousel-dots'>
         {hiddenText.map((item, idx) => (
           <button
@@ -85,7 +107,6 @@ const HomeGuideCard = ({ setImageSrc, isDarkMode }) => {
             className={`grid ${item.div} ${
               hovered === item.div ? 'active' : ''
             } ${isDarkMode ? 'dark' : ''} `}
-            
             onMouseEnter={() => {
               setImageSrc(item.image); // Update the image source on hover
               setHovered(item.div); // Set the hovered state

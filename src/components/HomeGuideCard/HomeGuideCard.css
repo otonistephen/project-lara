@@ -125,7 +125,6 @@
 }
 
 .button-container {
-  
   display: none;
 }
 
@@ -202,9 +201,37 @@
 
 /* MOBILE PHONES */
 @media (max-width: 768px) {
+ 
+  .guide-grid {
+    display: block;
+    padding: 0;
+    max-width: 70vw;
+    margin: 0 auto;
+    /* additional code for swiping */
+    /* display: flex;
+    flex-direction: row;
+    padding: 0;
+    gap: 0;
+    justify-content: center; */
+  }
+  .grid {
+    color: #343434;
+    padding-left: 0;
+    display: none;
+    margin-top: 2rem;
+    /* additional code for swiping */
+    /* flex: 0 0 100%;
+    margin: 0;
+    display: none;
+    opacity: 0; */
+  }
+
   .grid.active {
     box-shadow: none;
     display: block;
+/* additional code for swiping */
+    /* opacity: 1; */
+    /* transform: translateX(0); */
   }
 
   .grid.active.dark {
@@ -234,21 +261,6 @@
     width: 3.2rem;
     border-radius: 1rem;
   }
-  .grid {
-    color: #343434;
-    padding-left: 0;
-    display: none;
-    margin-top: 2rem;
-  }
-  .guide-grid {
-    display: block;
-    padding: 0;
-    /* max-width: 36rem; */
-    max-width: 70vw;
-   
-    margin: 0 auto;
-    /* background-color: green; */
-  }
 
   .guide-h4.active {
     font-size: max(3vw, 1.2rem);
@@ -258,19 +270,17 @@
   .guide-h2.active {
     font-weight: 500;
     font-size: max(4vw, 2.2rem);
-    
   }
   .guide-text p {
     font-size: max(2.5vw, 1.6rem);
     margin-bottom: 2rem;
-   
+
     line-height: 1.9rem;
   }
-   .time-p{
-    font-size: max(2vw, 1.2rem)!important;
-    
+  .time-p {
+    font-size: max(2vw, 1.2rem) !important;
   }
-  .guide-flex img{
+  .guide-flex img {
     width: 0.7rem;
   }
   .btn {
@@ -299,14 +309,13 @@
   }
 } */
 
-@media  (max-width: 400px) {
+@media (max-width: 400px) {
   .btn {
     margin-left: 0;
   }
-  
-  .guide-h4{
- 
-  margin-right: 3rem!important;
+
+  .guide-h4 {
+    margin-right: 3rem !important;
   }
 }
 @media (max-width: 1024px) {
@@ -325,42 +334,39 @@
 }
 
 @media (max-width: 768px) {
-  .dem-next-btn{
+  .dem-next-btn {
     left: 72vw;
   }
-  .dem-previous-btn{
+  .dem-previous-btn {
     right: 3vw;
   }
 }
-.wrapper.dark .button-container img{
+.wrapper.dark .button-container img {
   filter: invert();
 }
-@media(min-width: 820px) and (max-width: 900px) {
-  
+@media (min-width: 820px) and (max-width: 900px) {
 }
 
-@media(min-width: 768px) and (max-width: 1024px){
-  
-  .dem-next-btn{
+@media (min-width: 768px) and (max-width: 1024px) {
+  .dem-next-btn {
     left: 60vw;
   }
-  .dem-previous-btn{
+  .dem-previous-btn {
     right: 3vw;
   }
 }
-@media(min-width: 1024px) and (max-width: 1173px){
-  
-  .guide-flex h4.active, .guide-flex h4{
+@media (min-width: 1024px) and (max-width: 1173px) {
+  .guide-flex h4.active,
+  .guide-flex h4 {
     font-size: 1.5rem;
-    }
-    .guide-text h2{
-      font-size: x-large;
-    }
   }
+  .guide-text h2 {
+    font-size: x-large;
+  }
+}
 
-  @media(min-width: 1024px) and (max-width: 1280px){
-.btn{
+@media (min-width: 1024px) and (max-width: 1280px) {
+  .btn {
     margin-left: 0;
   }
-  }
-  
+}

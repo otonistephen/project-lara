@@ -94,13 +94,7 @@
 
 
 @media (min-width: 768px) and (max-width: 1024px){
-.guide-card-image{
-  
-   height: 30rem;
-}
-.guide-card-image img{
-height: 20vh;
-}
+
 .guide-card{
   gap: 1rem;
  
