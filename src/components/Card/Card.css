@@ -54,7 +54,7 @@
   line-height: 2.266rem;
   margin-bottom: 2rem;
   color: #2c3238;
-  flex-grow: 1; 
+  flex-grow: 1;
 }
 
 .card-next-btn,
@@ -79,7 +79,9 @@
     justify-content: flex-start;
     position: relative;
     width: calc(60vw * 4 + 1rem * 3); /* Total width: 4 cards * 60vw + 3 gaps */
-    transform: translateX(calc(-1 * (60vw + 1rem) * var(--current-index))); /* Slide the entire container */
+    transform: translateX(
+      calc(-1 * (60vw + 1rem) * var(--current-index))
+    ); /* Slide the entire container */
     transition: transform 0.3s ease;
   }
   /* .card.dark:hover {
@@ -102,6 +104,7 @@
   }
   .card.active {
     opacity: 1;
+    
   }
   .card p {
     width: 20rem;
@@ -172,16 +175,17 @@
   }
 }
 
-
 @media (max-width: 321px) {
   .card-container {
     max-width: 90vw; /* 288px on a 320px screen */
   }
   .card-box {
     width: calc(75vw * 4 + 1rem * 3); /* Total width: 4 cards * 75vw + 3 gaps */
-    transform: translateX(calc(-1 * (75vw + 1rem) * var(--current-index) - 10vw)); /* Slide by exact card width + gap */
+    transform: translateX(
+      calc(-1 * (75vw + 1rem) * var(--current-index) - 10vw)
+    ); /* Slide by exact card width + gap */
     gap: 1rem;
-   /* background-color: green; */
+    /* background-color: green; */
   }
   .card {
     flex: 0 0 75vw; /* 240px on a 320px screen */
@@ -207,9 +211,10 @@
   }
   .card-box {
     width: calc(70vw * 4 + 1rem * 3); /* Match new card width */
-    transform: translateX(calc(-1 * (70vw + 1rem) * var(--current-index) - 6vw)); /* Adjust transform */
+    transform: translateX(
+      calc(-1 * (70vw + 1rem) * var(--current-index) - 6vw)
+    ); /* Adjust transform */
     gap: 1rem;
-   
   }
   .card {
     flex: 0 0 70vw; /* 224px at 320px, 329px at 470px */
@@ -227,13 +232,13 @@
     max-width: 10vw;
   }
 }
-@media(min-width: 371px) and (max-width: 400px){
+@media (min-width: 371px) and (max-width: 400px) {
   .card-box {
     width: calc(70vw * 4 + 1rem * 3); /* Match new card width */
-    transform: translateX(calc(-1 * (70vw + 1rem) * var(--current-index) - 10vw)); /* Adjust transform */
+    transform: translateX(
+      calc(-1 * (70vw + 1rem) * var(--current-index) - 10vw)
+    ); /* Adjust transform */
     gap: 1rem;
-   
-   
   }
   .card {
     flex: 0 0 70vw; /* 224px at 320px, 329px at 470px */
@@ -243,163 +248,153 @@
 @media (min-width: 401px) and (max-width: 431px) {
   .card-box {
     width: calc(65.42vw * 4 + 1rem * 3); /* Match observed card width */
-    transform: translateX(calc(-1 * (65.42vw + 1rem) * var(--current-index) - 7vw));
+    transform: translateX(
+      calc(-1 * (65.42vw + 1rem) * var(--current-index) - 7vw)
+    );
     gap: 1rem;
-  
   }
   .card {
     flex: 0 0 65.42vw; /* Match observed width */
     width: 65.42vw;
-   
-  }
- 
-}
- @media (min-width: 431px)and (max-width: 466px){
- .card-box {
-    display: flex;
-   
-    gap: 1rem; /* Space between cards */
-    justify-content: flex-start;
-   
-    width: calc(60vw * 4 + 1rem * 3); /* Total width: 4 cards * 60vw + 3 gaps */
-    transform: translateX(calc(-1 * (60vw + 1rem) * var(--current-index) - 3vw)); /* Slide the entire container */
-    
-  }
-  .card {
-    
-    flex: 0 0 60vw; /* Card width, allowing peek */
-    width: 60vw;
-    
-  }
-} 
-@media(min-width: 466px) and (max-width: 478px){
-  .card-box {
-    display: flex;
-   
-    gap: 1rem; /* Space between cards */
-    justify-content: flex-start;
-   
-    width: calc(60vw * 4 + 1rem * 3); /* Total width: 4 cards * 60vw + 3 gaps */
-    transform: translateX(calc(-1 * (60vw + 1rem) * var(--current-index) - 0.9vw)); /* Slide the entire container */
-    
-  }
-  .card {
-    
-    flex: 0 0 60vw; /* Card width, allowing peek */
-    width: 60vw;
-    
   }
 }
-@media(min-width: 478px) and (max-width: 500px){
+@media (min-width: 431px) and (max-width: 466px) {
   .card-box {
     display: flex;
-   
+
+    gap: 1rem; /* Space between cards */
+    justify-content: flex-start;
+
+    width: calc(60vw * 4 + 1rem * 3); /* Total width: 4 cards * 60vw + 3 gaps */
+    transform: translateX(
+      calc(-1 * (60vw + 1rem) * var(--current-index) - 3vw)
+    ); /* Slide the entire container */
+  }
+  .card {
+    flex: 0 0 60vw; /* Card width, allowing peek */
+    width: 60vw;
+  }
+}
+@media (min-width: 466px) and (max-width: 478px) {
+  .card-box {
+    display: flex;
+
+    gap: 1rem; /* Space between cards */
+    justify-content: flex-start;
+
+    width: calc(60vw * 4 + 1rem * 3); /* Total width: 4 cards * 60vw + 3 gaps */
+    transform: translateX(
+      calc(-1 * (60vw + 1rem) * var(--current-index) - 0.9vw)
+    ); /* Slide the entire container */
+  }
+  .card {
+    flex: 0 0 60vw; /* Card width, allowing peek */
+    width: 60vw;
+  }
+}
+@media (min-width: 478px) and (max-width: 500px) {
+  .card-box {
+    display: flex;
+
     gap: 4rem; /* Space between cards */
     justify-content: flex-start;
-   
+
     width: calc(60vw * 4 + 4rem * 3); /* Total width: 4 cards * 60vw + 3 gaps */
-    transform: translateX(calc(-1 * (60vw + 1rem) * var(--current-index) - 0vw)); /* Slide the entire container */
-    
+    transform: translateX(
+      calc(-1 * (60vw + 1rem) * var(--current-index) - 0vw)
+    ); /* Slide the entire container */
   }
   .card {
-    
     flex: 0 0 60vw; /* Card width, allowing peek */
     width: 60vw;
-    
   }
 }
 
-
-@media(min-width: 500px) and (max-width: 530px){
+@media (min-width: 500px) and (max-width: 530px) {
   .card-box {
     display: flex;
-   
+
     gap: 5rem; /* Space between cards */
     justify-content: flex-start;
-   
+
     width: calc(60vw * 4 + 5rem * 3); /* Total width: 4 cards * 60vw + 3 gaps */
-    transform: translateX(calc(-1 * (60vw + 1rem) * var(--current-index) + 2vw)); /* Slide the entire container */
-    
+    transform: translateX(
+      calc(-1 * (60vw + 1rem) * var(--current-index) + 2vw)
+    ); /* Slide the entire container */
   }
   .card {
-    
     flex: 0 0 60vw; /* Card width, allowing peek */
     width: 60vw;
-    
   }
 }
 
-
-@media(min-width: 530px) and (max-width: 550px){
+@media (min-width: 530px) and (max-width: 550px) {
   .card-box {
     display: flex;
-   
+
     gap: 10rem; /* Space between cards */
     justify-content: flex-start;
-   
-    width: calc(60vw * 4 + 11rem * 3); /* Total width: 4 cards * 60vw + 3 gaps */
-    transform: translateX(calc(-1 * (60vw + 5rem) * var(--current-index) + 2vw)); /* Slide the entire container */
-    
+
+    width: calc(
+      60vw * 4 + 11rem * 3
+    ); /* Total width: 4 cards * 60vw + 3 gaps */
+    transform: translateX(
+      calc(-1 * (60vw + 5rem) * var(--current-index) + 2vw)
+    ); /* Slide the entire container */
   }
   .card {
-    
     flex: 0 0 60vw; /* Card width, allowing peek */
     width: 60vw;
-    
   }
 }
-@media(min-width: 550px) and (max-width: 571px){
+@media (min-width: 550px) and (max-width: 571px) {
   .card-box {
     display: flex;
-   
+
     gap: 7rem; /* Space between cards */
     justify-content: flex-start;
-   
+
     width: calc(60vw * 4 + 6rem * 3); /* Total width: 4 cards * 60vw + 3 gaps */
-    transform: translateX(calc(-1 * (60vw + 1rem) * var(--current-index) + 2vw)); /* Slide the entire container */
-    
+    transform: translateX(
+      calc(-1 * (60vw + 1rem) * var(--current-index) + 2vw)
+    ); /* Slide the entire container */
   }
   .card {
-    
     flex: 0 0 60vw; /* Card width, allowing peek */
     width: 60vw;
-    
   }
 }
-@media(min-width: 571px) and (max-width: 600px){
+@media (min-width: 571px) and (max-width: 600px) {
   .card-box {
     display: flex;
-   
+
     gap: 7rem; /* Space between cards */
     justify-content: flex-start;
-   
+
     width: calc(60vw * 4 + 6rem * 3); /* Total width: 4 cards * 60vw + 3 gaps */
-    transform: translateX(calc(-1 * (60vw + 1rem) * var(--current-index) + 2vw)); /* Slide the entire container */
-    
+    transform: translateX(
+      calc(-1 * (60vw + 1rem) * var(--current-index) + 2vw)
+    ); /* Slide the entire container */
   }
   .card {
-    
     flex: 0 0 60vw; /* Card width, allowing peek */
     width: 60vw;
-    
   }
 }
 
-
-
-@media(max-width: 370px){
-  .card-next-btn{
-   left: 85vw 
+@media (max-width: 370px) {
+  .card-next-btn {
+    left: 85vw;
   }
-  .card-previous-btn{
+  .card-previous-btn {
     right: 85vw;
   }
-} 
-@media(max-width: 600px){
-  .card-next-btn{
-   left: 80vw 
+}
+@media (max-width: 600px) {
+  .card-next-btn {
+    left: 80vw;
   }
-  .card-previous-btn{
+  .card-previous-btn {
     right: 80vw;
   }
-} 
+}

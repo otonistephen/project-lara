@@ -23,22 +23,24 @@ body.dark-mode {
 }
 .card.dark {
   background-color: #272727;
-
   color: #fff;
   box-shadow: 4px 3px 10px 4px #e9e2e212;
+}
+.card.active.dark {
+  background-color: #272727;
+  box-shadow: 4px 3px 10px 4px #00000012;
 }
 .card.dark:hover {
   background-color: #272727;
   box-shadow: 0 0 0 0.5rem green;
-  
 }
 .card.dark p {
   color: #fefefe;
 }
-.wrapper.dark .card-previous-btn, .wrapper.dark .card-next-btn{
+.wrapper.dark .card-previous-btn,
+.wrapper.dark .card-next-btn {
   filter: invert();
   opacity: 0.7;
-  
 }
 .guide-img.dark {
   background-color: #1d1d1d;
@@ -55,7 +57,7 @@ body.dark-mode {
   color: #fefefe;
 }
 .btn.dark {
-  background-color: #004E2033;
+  background-color: #004e2033;
   border: #a0dbb8 0.2rem solid;
   color: #ffffff;
 }
@@ -71,136 +73,130 @@ body.dark-mode {
 .subscribe-btn.dark {
   background-color: #a0dbb833;
   color: #ffffff;
-  border: 0.2rem solid #A0DBB8;
+  border: 0.2rem solid #a0dbb8;
 }
-.placeholder.dark{
-  border: 0.2rem solid #B3AFEA;
-  background-color: #1D1D1D;
+.placeholder.dark {
+  border: 0.2rem solid #b3afea;
+  background-color: #1d1d1d;
   color: #fefefe;
 }
-.placeholder.dark::placeholder{
-  color: #FFFFFF;
+.placeholder.dark::placeholder {
+  color: #ffffff;
 }
-.dotted-img.dark{
+.dotted-img.dark {
   filter: invert(1) brightness(100%);
 }
-.about-bottom.dark{
+.about-bottom.dark {
   background-color: #2b2c2b;
 }
 
 .horizontal-line.dark span:before,
-.horizontal-line.dark span:after{
-  background:#92E3A9CC;
-
+.horizontal-line.dark span:after {
+  background: #92e3a9cc;
 }
-.x-twitter.dark{
+.x-twitter.dark {
   filter: invert(1);
 }
-.hr.dark{
-color: #92E3A9CC;
+.hr.dark {
+  color: #92e3a9cc;
 }
-.dem-container.dark .header-dem{
+.dem-container.dark .header-dem {
   background-color: #2b2c2b;
 }
-.dem-container.dark .dem-hero{
+.dem-container.dark .dem-hero {
   background-color: #272727;
-  
 }
-.dem-container.dark .dem-menu li{
-  background-color: #1D1D1D;
-  
+.dem-container.dark .dem-menu li {
+  background-color: #1d1d1d;
 }
-.dem-container.dark .dem-menu li:hover{
-
- box-shadow:  0 0 0 0.1rem #92E3A9;
+.dem-container.dark .dem-menu li:hover {
+  box-shadow: 0 0 0 0.1rem #92e3a9;
 }
-.dem-container.dark .dem-menu li.active{
+.dem-container.dark .dem-menu li.active {
   background-color: #0b6430;
 }
-.dem-container.dark .dem-menu-container.sticky{
+.dem-container.dark .dem-menu-container.sticky {
   background-color: #393535;
 }
 
 /* DEM-ARTICLE */
-.dem-container.dark .dem-article-container{
-  background-color: #1D1D1D;
+.dem-container.dark .dem-article-container {
+  background-color: #1d1d1d;
 }
-.dem-container.dark .dem-article-container .early-days-cont h1,.dem-container.dark .dem-article-container .early-days-p{
+.dem-container.dark .dem-article-container .early-days-cont h1,
+.dem-container.dark .dem-article-container .early-days-p {
   color: #fefefe;
 }
-.dem-container.dark .cont-reading{
-  background-color:#004E2033;
+.dem-container.dark .cont-reading {
+  background-color: #004e2033;
   color: #fefefe;
-  border: 0.2rem solid #A0DBB8; 
+  border: 0.2rem solid #a0dbb8;
 }
-.dem-container.dark .cont-reading img{
+.dem-container.dark .cont-reading img {
   filter: invert(1);
 }
-.dem-container.dark .previous{
-  border: 0.2rem solid #A0DBB8;
-  background-color: #1D1D1D;
+.dem-container.dark .previous {
+  border: 0.2rem solid #a0dbb8;
+  background-color: #1d1d1d;
   color: #fefefe;
 }
-.dem-container.dark .previous img{
+.dem-container.dark .previous img {
   filter: invert(1);
 }
-.dem-container.dark .author-container{
+.dem-container.dark .author-container {
   background-color: #272727;
 }
-.dem-container.dark .twitter-x{
+.dem-container.dark .twitter-x {
   filter: invert();
 }
 
 /* NEWSLETTER DARKMODE STYLING */
-.wrapper.dark .wrapper{
-  background-color: #1D1D1D;
-  
+.wrapper.dark .wrapper {
+  background-color: #1d1d1d;
 }
 
-.wrapper.dark .newsletter-container h2{
+.wrapper.dark .newsletter-container h2 {
   color: #fefefe;
 }
-.wrapper.dark .newsletter-container p{
-  color: #fefefe;
-  
-}
-.wrapper.dark .newsl-sub-h2{
+.wrapper.dark .newsletter-container p {
   color: #fefefe;
 }
-.wrapper.dark .newsl-sub-p{
+.wrapper.dark .newsl-sub-h2 {
+  color: #fefefe;
+}
+.wrapper.dark .newsl-sub-p {
   color: #fefefe;
 }
 
 /* Guides darkkmode styling */
-.wrapper.dark .guide-container .guides-menu li{
+.wrapper.dark .guide-container .guides-menu li {
   background-color: #272727;
 }
-.wrapper.dark .guide-container .guides-menu li:hover{
-  box-shadow:  0 0 0 0.1rem #92E3A9;
+.wrapper.dark .guide-container .guides-menu li:hover {
+  box-shadow: 0 0 0 0.1rem #92e3a9;
 }
-.wrapper.dark .guide-container .guides-menu li.active{
+.wrapper.dark .guide-container .guides-menu li.active {
   background-color: #0b6430;
 }
-.wrapper.dark .guide-card-grid .guide-card{
+.wrapper.dark .guide-card-grid .guide-card {
   background-color: #272727;
 }
 
 /* Guide footer  */
-.wrapper.dark .guide-footer-section{
-  background-color: #1D1D1D;
+.wrapper.dark .guide-footer-section {
+  background-color: #1d1d1d;
 }
-.wrapper.dark .subscribe-button .placeholder{
-  border: 0.2rem solid #B3AFEA;
-  background-color: #1D1D1D;
+.wrapper.dark .subscribe-button .placeholder {
+  border: 0.2rem solid #b3afea;
+  background-color: #1d1d1d;
   color: #fefefe;
 }
 
-.wrapper.dark .subscribe-button .placeholder::placeholder{
-  color: #FFFFFF;
+.wrapper.dark .subscribe-button .placeholder::placeholder {
+  color: #ffffff;
 }
-.wrapper.dark .subscribe-button button{
+.wrapper.dark .subscribe-button button {
   background-color: #a0dbb833;
   color: #ffffff;
-  border: 0.2rem solid #A0DBB8;
+  border: 0.2rem solid #a0dbb8;
 }
-

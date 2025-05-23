@@ -2,8 +2,9 @@
 HERO SECTION
 ********************************/
 .hero {
-  /* background-color: #f9fafb; */
+  
   background-color: #f6f6f6;
+ 
   max-width: 100%;
 }
 
@@ -15,19 +16,18 @@ HERO SECTION
   max-width: 164.367rem;
 }
 .hero-bottom {
-  background-image: url(src/assets/homepagebackground.svg);
+  background-image: url(photo/homepagebackground.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: right;
 
-  /* margin: 0 auto; */
+ 
 }
 .hero-bottom-flex {
-  /* max-width: 164.367rem; */
-  max-width: 144rem;
+  
   display: flex;
   align-items: center;
-  /* margin: 0 auto; */
+ 
 }
 
 .hero-text {
@@ -49,20 +49,12 @@ HERO SECTION
     font-size: 2.4rem;
    
     margin-left: 1vw;
-    /* width: 26.7rem; */
-    /* text-align: center; */
-    /* padding-top: 9.6rem; */
-
-    /* padding-left: 8.2rem;
-    padding-bottom: 7.2rem;
-    padding-right: 8.1rem; */
-    /* background-color: red; */
+    
   }
   .hero-top {
     display: flex;
     justify-content: center;
-    /* background-color: green; */
-    /* margin: 0 auto; */
+    
     padding-bottom: 7.2rem;
     padding-top: 9.6rem;
     width: 100%;
@@ -71,12 +63,7 @@ HERO SECTION
     box-sizing: border-box;
    
   }
-  /* .hero-bottom-flex{
-    padding-top: 9.6rem;
-    padding-left: 8.2rem;
-    padding-bottom: 7.2rem;
-    padding-right: 8.1rem;
-  } */
+ 
 
   .hero-top p {
     display: none;
@@ -88,9 +75,7 @@ HERO SECTION
     position: relative;
   }
 
-  /* .card {
-    display: ;
-  } */
+  
 
   .hero-text {
     margin: 0;

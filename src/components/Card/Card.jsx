@@ -32,7 +32,7 @@ const cardDatas = [
     photoName: images.blockchainDark || 'photo/undraw_nakamoto_-2-iv6 _dark_mode.svg',
   },
   {
-    name: 'Web',
+    name: 'The Web',
     photoName: images.webDark || 'photo/web_dark_mode.svg',
   },
   {
@@ -47,7 +47,7 @@ const Card = ({ isDarkMode }) => {
 
   useEffect(() => {
     setDarkModeData(isDarkMode ? cardDatas : cardData);
-    setCurrentIndex(0);
+    // setCurrentIndex(0);
   }, [isDarkMode]);
 
   const swipeHandlers = useSwipeable({

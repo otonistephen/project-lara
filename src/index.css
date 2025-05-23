@@ -5,6 +5,24 @@
   margin: 0;
   box-sizing: border-box;
 }
+/* Remove tap highlight globally */
+*,
+*:before,
+*:after {
+  -webkit-tap-highlight-color: transparent; /* Remove blue highlight on iOS/Android */
+  -webkit-touch-callout: none; /* Disable iOS long-press context menu */
+  user-select: none; /* Prevent text selection on tap */
+}
+
+/* Ensure focusable elements don't show outlines on tap */
+a,
+button,
+input,
+textarea,
+select,
+[tabindex]:not([tabindex="-1"]) {
+  outline: none; /* Remove focus outline on tap */
+}
 
 html {
   font-size: 62.5%;
