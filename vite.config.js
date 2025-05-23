@@ -9,4 +9,5 @@ export default defineConfig({
     outputFile: 'test-results/junit.xml', // For Jenkins JUnit reports
     reporter: ['default', 'junit']
   }
+  
 })

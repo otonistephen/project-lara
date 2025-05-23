@@ -20,8 +20,6 @@ HERO SECTION
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: right;
-
- 
 }
 .hero-bottom-flex {
   
@@ -81,7 +79,7 @@ HERO SECTION
     margin: 0;
   }
   .hero-bottom {
-    background-image: url(src/assets/homepagebackground.svg);
+    background-image: url(photo/homepagebackground.svg);
     background-repeat: no-repeat;
 
     background-size: cover;

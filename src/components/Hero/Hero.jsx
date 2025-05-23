@@ -4,9 +4,9 @@ import Card from '../Card/Card';
 import { images } from '../../assets/images';
 
 
-const Hero = ({isDarkMode}) => {
+const Hero = ({ isDarkMode }) => {
   return (
-    <section className={`hero ${isDarkMode ? 'dark':''}`}>
+    <section className={`hero ${isDarkMode ? 'dark' : ''}`}>
       <div className='hero-top'>
         <h1 className='header-primary'>Tech Explained Simply</h1>
         <p className='para-primary'>
@@ -14,12 +14,24 @@ const Hero = ({isDarkMode}) => {
         </p>
       </div>
       <div className='hero-bottom-main'>
-        <div className='hero-bottom'>
+        <div
+          className='hero-bottom'
+          // style={{
+          //   backgroundImage: `url(${homepagebackground})`,
+          //   backgroundRepeat: 'no-repeat',
+          //   backgroundSize: 'cover',
+          //   backgroundPositionX: 'right',
+          // }}
+        >
           <div className='hero-bottom-flex'>
             <div>
-              <img src={images.group_93} alt={images.group_93} className={`dot-img ${isDarkMode ? 'dark':''}`} />
+              <img
+                src={images.group_93}
+                alt={images.group_93}
+                className={`dot-img ${isDarkMode ? 'dark' : ''}`}
+              />
             </div>
-            <Card isDarkMode={isDarkMode}/>
+            <Card isDarkMode={isDarkMode} />
           </div>
 
           <div className='hero-text'>
