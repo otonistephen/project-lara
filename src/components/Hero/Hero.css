@@ -2,9 +2,8 @@
 HERO SECTION
 ********************************/
 .hero {
-  
   background-color: #f6f6f6;
- 
+
   max-width: 100%;
 }
 
@@ -15,17 +14,15 @@ HERO SECTION
 .hero-bottom-main {
   max-width: 164.367rem;
 }
-.hero-bottom {
-  background-image: url(photo/homepagebackground.svg);
+/* .hero-bottom {
+  background-image: url(photo/home_page_background.svg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position-x: right;
-}
+} */
 .hero-bottom-flex {
-  
   display: flex;
   align-items: center;
- 
 }
 
 .hero-text {
@@ -45,23 +42,20 @@ HERO SECTION
 @media (max-width: 768px) {
   .hero-top h1 {
     font-size: 2.4rem;
-   
+
     margin-left: 1vw;
-    
   }
   .hero-top {
     display: flex;
     justify-content: center;
-    
+
     padding-bottom: 7.2rem;
     padding-top: 9.6rem;
     width: 100%;
     padding-left: unset;
     padding-right: unset;
     box-sizing: border-box;
-   
   }
- 
 
   .hero-top p {
     display: none;
@@ -73,13 +67,11 @@ HERO SECTION
     position: relative;
   }
 
-  
-
   .hero-text {
     margin: 0;
   }
   .hero-bottom {
-    background-image: url(photo/homepagebackground.svg);
+    background-image: url(photo/home_page_background.svg);
     background-repeat: no-repeat;
 
     background-size: cover;

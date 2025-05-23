@@ -15,7 +15,7 @@ import group_85_AI_computer from './Group 85 AI computer.svg';
 import group_86_devops from './Group 86 devops2.svg';
 import group_93 from './Group 93.svg';
 import guide_section from './Guide Section New.png';
-import home_page_background from './homepagebackground.svg';
+import home_page_background from './home_page_background.svg';
 import linkedin_58 from './linkedin 58.svg';
 import newsletter from './newsletter.svg';
 import rectangle_218 from './Rectangle 218.png';

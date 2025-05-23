@@ -4,6 +4,8 @@ import Card from '../Card/Card';
 import { images } from '../../assets/images';
 
 
+
+
 const Hero = ({ isDarkMode }) => {
   return (
     <section className={`hero ${isDarkMode ? 'dark' : ''}`}>
@@ -12,16 +14,17 @@ const Hero = ({ isDarkMode }) => {
         <p className='para-primary'>
           Demystifying Tech from the Non-Tech crowd
         </p>
+
       </div>
       <div className='hero-bottom-main'>
         <div
           className='hero-bottom'
-          // style={{
-          //   backgroundImage: `url(${homepagebackground})`,
-          //   backgroundRepeat: 'no-repeat',
-          //   backgroundSize: 'cover',
-          //   backgroundPositionX: 'right',
-          // }}
+          style={{
+           backgroundImage: `url(/photo/home_page_background.svg)`,
+            backgroundRepeat: 'no-repeat',
+            backgroundSize: 'cover',
+            backgroundPositionX: 'right',
+          }}
         >
           <div className='hero-bottom-flex'>
             <div>
