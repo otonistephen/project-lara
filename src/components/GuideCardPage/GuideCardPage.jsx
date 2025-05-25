@@ -1,8 +1,12 @@
 import React from 'react';
 import './GuideCardPage.css';
 import { images } from '../../assets/images';
+import { useEffect } from 'react';
 
 const GuideCardPage = ({ filteredGuides}) => {
+
+ 
+  
   return (
     <div className='guide-card-grid'>
       {filteredGuides.map((card, index) => (

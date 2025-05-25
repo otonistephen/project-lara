@@ -20,6 +20,8 @@
   display: flex;
   gap: 4rem;
   align-items: center;
+
+  /* transition: transform 0.2s ease, opacity 0.2s ease; */
 }
 nav {
   display: flex;
@@ -35,6 +37,7 @@ nav {
   list-style: none;
   cursor: pointer;
 }
+
 .logo {
   font-size: 4.966rem;
   font-family: 'Plus Jakarta Sans', sans-serif;
@@ -53,39 +56,7 @@ nav {
   display: none;
 }
 /* MOBILE RESPONSIVENESS */
-/*
-@media (max-width: 768px) {
- .nav-bar {
-    padding: 0 2rem;
-    height: 8rem;
-  }
 
-  .nav-menu {
-    display: none;
-    flex-direction: column;
-    position: absolute;
-    top: 8rem;
-    left: 0;
-    width: 100%;
-    transition: left 0.3s ease-in-out;
-    background-color: #fefefe;
-    padding: 2rem;
-    box-shadow: 0px 3px 4px 0px #00000012;
-  }
-
-  .nav-menu.show {
-    display: flex;
-  }
-
-  .menu-icon {
-    display: block;
-  }
-
-  nav {
-    gap: 2rem;
-  } 
-}
-*/
 @media (max-width: 393px) {
   .logo {
     font-size: 3rem !important;
@@ -105,47 +76,72 @@ nav {
 
     margin-bottom: -0.77rem;
   }
+
   .nav-menu {
     display: flex;
     flex-direction: column;
     position: fixed;
     top: 0;
-    right: 100%; /* adjust this value to match the width of your menu */
+    left: -100%; /*adjust this value to match the width of your menu */
+    gap: 0;
     height: 100vh;
     width: 100vw; /* adjust this value to match the width of your menu */
     background-color: #fefefe;
-    padding: 2rem;
+    /* padding: 2rem; */
     box-shadow: 0px 3px 4px 0px #00000012;
-    transition: right 0.3s ease-in-out;
-    z-index: 1000; 
+    transition: transform 0.5s ease-in-out;
+    z-index: 1000;
     align-items: unset;
-    padding-left: 2.5rem;
-    /* margin: 2rem; */
-    transition: transform 0.3s ease-in-out; /* this is to remove the transition *NB i will look at it agaian**/
-    
+    /* padding-left: 2.5rem; */
+    transform: translateX(-100%);
   }
-
   /* .nav-menu:not(.show){ 
     transition: none; 
   } */
-  .nav-menu.show {
-    right: 0;
-  }
 
   .nav-menu.show {
     transform: translateX(0);
-    /* background-color: red; */
+    left: 0;
+    transition: transform 0.2s ease-in-out;
+    opacity: 1;
   }
+
   .mobile-nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    
+    padding: 2rem;
+    padding-left: 2.5rem;
   }
 
+  /* .nav-menu li a:active {
+    opacity: 0.7; 
+    color: rgb(225, 225, 230);
+  } */
+
+  .nav-menu li a {
+    padding-right: 27rem;
+  }
+  .clicked.active {
+    background-color:#A0DBB8;
+    color: white;
+  }
+  .wrapper.dark .clicked.active{
+     background-color: #0b6430;
+  }
+  .nav-menu li {
+    padding: 2rem;
+  
+    padding-left: 2.5rem;
+    
+  }
   .menu-icon {
     display: block;
-    margin-top: 0.5rem;
+    margin-top: 0.9rem;
+    cursor: pointer;
+  }
+  .menu-icon img {
+    transition: opacity 0.2s ease;
   }
 
   nav {

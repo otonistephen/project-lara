@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './Guides.css';
 import GuideCardPage from '../../components/GuideCardPage/GuideCardPage';
 import { useLocation, useNavigate } from 'react-router-dom';
+import { images } from '../../assets/images';
 
 const guidesContent = [
   {
@@ -81,26 +82,28 @@ const Guides = ({ isDarkMode }) => {
     setCurrentCategory(category);
   }, [location.search]);
 
-  // useEffect(() => {
-  //   if (currentCategory) {
-  //     setClick(currentCategory);
-  //     setFilteredGuides(
-  //       guidesContent.filter(guide => guide.title === currentCategory)
-  //     );
-      
-  //   }
-  // }, [currentCategory]);
-
   useEffect(() => {
-  if (currentCategory === 'all') {
-    setFilteredGuides(guidesContent);
-  } else if (currentCategory) {
-    setFilteredGuides(
-      guidesContent.filter(guide => guide.title === currentCategory)
-    );
-  }
-}, [currentCategory]);
-  
+    if (currentCategory === 'all') {
+      setFilteredGuides(guidesContent);
+    } else if (currentCategory) {
+      setFilteredGuides(
+        guidesContent.filter(guide => guide.title === currentCategory)
+      );
+    }
+  }, [currentCategory]);
+
+ useEffect(() => {
+  const preloadImages = guidesContent.map(guide => {
+    const img = new Image();
+    img.src = guide.image;
+    img.onerror = () => console.error(`Failed to preload image: ${guide.image}`);
+    return img;
+  });
+
+  return () => {
+    preloadImages.forEach(img => (img.src = ''));
+  };
+}, [guidesContent]); // 
 
   return (
     <div className='wrapper'>

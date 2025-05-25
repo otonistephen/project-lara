@@ -33,13 +33,13 @@ import day_icon from './day-icon.svg';
 import night_icon from './night-icon.svg';
 import eye from './eye.svg';
 import arrowright from './arrowright.svg';
-import arrowleft from './arrowleft.svg'
-import close_icon from './close_icon.svg'
-import vector_dropdown from './Vector_dropdown.svg'
-import dropdown_icon from './dropdown_icon.svg'
-import next from './next.svg'
-import previous from './previous.svg'
-
+import arrowleft from './arrowleft.svg';
+import close_icon from './close_icon.svg';
+import vector_dropdown from './Vector_dropdown.svg';
+import dropdown_icon from './dropdown_icon.svg';
+import next from './next.svg';
+import previous from './previous.svg';
+import group_87 from './Group 87.svg';
 
 export const images = {
   arrowleft,
@@ -64,6 +64,7 @@ export const images = {
   group_56,
   group_85_AI_computer,
   group_86_devops,
+  group_87,
   group_98,
   group_93,
   guide_section,
