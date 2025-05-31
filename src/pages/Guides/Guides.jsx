@@ -4,6 +4,9 @@ import GuideCardPage from '../../components/GuideCardPage/GuideCardPage';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { images } from '../../assets/images';
 
+
+
+
 const guidesContent = [
   {
     title: 'Blockchain',

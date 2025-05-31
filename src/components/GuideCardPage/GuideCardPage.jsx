@@ -1,7 +1,7 @@
 import React from 'react';
 import './GuideCardPage.css';
 import { images } from '../../assets/images';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 const GuideCardPage = ({ filteredGuides}) => {
 

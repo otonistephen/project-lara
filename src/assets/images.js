@@ -13,6 +13,7 @@ import group_39 from './Group 39 Web.svg';
 import group_56 from './Group 56.png';
 import group_85_AI_computer from './Group 85 AI computer.svg';
 import group_86_devops from './Group 86 devops2.svg';
+import group_87 from './Group 87.svg';
 import group_93 from './Group 93.svg';
 import guide_section from './Guide Section New.png';
 import home_page_background from './home_page_background.svg';
@@ -39,7 +40,15 @@ import vector_dropdown from './Vector_dropdown.svg';
 import dropdown_icon from './dropdown_icon.svg';
 import next from './next.svg';
 import previous from './previous.svg';
-import group_87 from './Group 87.svg';
+
+
+// import group_32 from '../public/photo/Group 32.svg';
+// import group_34_AI from '../public/photo/Group 34 AI.svg';
+// import group_85_AI_computer from '../public/photo/Group 85 AI computer.svg';
+// import group_87 from '../public/photo/Group 87.svg';
+// import group_39 from '../public/photo/Group 39 Web.svg';
+// import devop_Img_2 from '../public/photo/devopsImg2.svg';
+
 
 export const images = {
   arrowleft,
