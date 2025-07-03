@@ -79,7 +79,7 @@ const Navbar = ({ toggleDarkMode, isDarkMode }) => {
                 setClicked('Guides');
                 closeMobileMenu();
               }}
-              className={clicked === 'Guides' ? 'active' : ''}
+              // className={clicked === 'Guides' ? 'active' : ''}
             >
               Guides
             </Link>

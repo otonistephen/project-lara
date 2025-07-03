@@ -12,7 +12,7 @@ const App = () => {
     const storedMode = localStorage.getItem('darkMode');
     return storedMode === 'true';
   }); // State to track dark mode
-  // const [imageCard, setImageCard] = useState()
+  
 
   useEffect(() => {
     localStorage.setItem('darkMode', isDarkMode);
@@ -28,7 +28,7 @@ const App = () => {
   return (
     <div className={`wrapper ${isDarkMode ? 'dark' : ''}`}>
       <header>
-        {/* Pass toggleDarkMode and isDarkMode as props to Navbar */}
+        
         <Navbar toggleDarkMode={toggleDarkMode} isDarkMode={isDarkMode} />
       </header>
       <Routes>

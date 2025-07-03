@@ -148,14 +148,4 @@ const DemystifyHero = () => {
 };
 
 export default DemystifyHero;
-.dem-menu-container.sticky {
-  position: fixed;
-  width: 144rem;
-  top: 0;
-  /* z-index: 1; */
-  /*transition: all 500ms ease-in-out;*/
-  /* height: 9.3rem; */
-  background-color: #fefefe;
-  z-index: 1;
-  
-}
+

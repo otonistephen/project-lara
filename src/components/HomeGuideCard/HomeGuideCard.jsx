@@ -111,7 +111,7 @@ const HomeGuideCard = ({ setImageSrc, isDarkMode }) => {
               setImageSrc(item.image); // Update the image source on hover
               setHovered(item.div); // Set the hovered state
             }}
-            onMouseLeave={() => hovered(null)} // Reset hover state
+            // onMouseLeave={() => hovered(null)} // Reset hover state
           >
             <Link to={item.path} onClick={handleMenuClick}>
               <div className='guide-flex'>
