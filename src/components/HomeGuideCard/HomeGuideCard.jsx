@@ -82,7 +82,7 @@ const HomeGuideCard = ({ setImageSrc, isDarkMode }) => {
   });
 
   return (
-    <div className='gruide-container' {...swipeHandlers}>
+    <div className='animate gruide-container' {...swipeHandlers}>
       <div className='guide-carousel-dots'>
         {hiddenText.map((item, idx) => (
           <button
