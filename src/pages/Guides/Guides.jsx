@@ -2,7 +2,6 @@ import React, { useState, useEffect } from 'react';
 import './Guides.css';
 import GuideCardPage from '../../components/GuideCardPage/GuideCardPage';
 import { useLocation, useNavigate } from 'react-router-dom';
-import { images } from '../../assets/images';
 
 const guidesContent = [
   {
@@ -23,7 +22,7 @@ const guidesContent = [
   },
   {
     title: 'AI',
-    image: '/photo/Group_85_AI computer.svg',
+    image: '/photo/Group_85_AI_computer.svg',
     time: '12',
     heading: 'Demystifying Computer: A to Z',
     description:
@@ -60,53 +59,42 @@ const Guides = ({ isDarkMode }) => {
   const navigate = useNavigate();
   const location = useLocation();
   const [filteredGuides, setFilteredGuides] = useState(guidesContent);
-  const [click, setClick] = useState(null);
+  const [click, setClick] = useState('all');
 
-  const [currentCategory, setCurrentCategory] = useState();
-
-  const filterGuides = category => {
+  useEffect(() => {
+    const searchParams = new URLSearchParams(location.search);
+    const category = searchParams.get('category') || 'all';
     if (category === 'all') {
       setFilteredGuides(guidesContent);
       setClick('all');
     } else {
-      const filtered = guidesContent.filter(guide => guide.title === category);
-      setFilteredGuides(filtered);
+      setFilteredGuides(
+        guidesContent.filter(guide => guide.title === category)
+      );
       setClick(category);
     }
-    navigate(`?category=${category}`);
-  };
-
-  useEffect(() => {
-    const searchParams = new URLSearchParams(location.search);
-    const category = searchParams.get('category');
-    setCurrentCategory(category);
   }, [location.search]);
 
   useEffect(() => {
-    if (currentCategory === 'all') {
-      setFilteredGuides(guidesContent);
-    } else if (currentCategory) {
-      setFilteredGuides(
-        guidesContent.filter(guide => guide.title === currentCategory)
-      );
-    }
-  }, [currentCategory]);
-
-  useEffect(() => {
-    const preloadImages = guidesContent.map(guide => {
+    const preloadId = Math.random().toString(36).substring(2, 8);
+    let isMounted = true;
+    const uniqueImages = [...new Set(guidesContent.map(guide => guide.image))];
+    const preloadImages = uniqueImages.map(image => {
       const img = new Image();
-      img.src = guide.image;
+      img.src = image;
       img.onerror = () =>
-        console.error(`Failed to preload image: ${guide.image}`);
+        isMounted && console.warn(`[${preloadId}] Failed to preload: ${image}`);
       return img;
     });
-
     return () => {
-      preloadImages.forEach(img => {
-        img.src = ''; // Cleanup to prevent memory leaks
-      });
+      isMounted = false;
+      preloadImages.forEach(img => (img.src = ''));
     };
-  }, []); //
+  }, []);
+
+  const filterGuides = category => {
+    navigate(`?category=${category}`);
+  };
 
   return (
     <div className='wrapper'>
@@ -118,34 +106,17 @@ const Guides = ({ isDarkMode }) => {
       </h2>
       <div className='guide-container'>
         <ul className='guides-menu'>
-          <li
-            onClick={() => filterGuides('AI')}
-            className={click === 'AI' ? 'active' : ''}
-          >
-            AI
-          </li>
-          <li
-            onClick={() => filterGuides('DevOps')}
-            className={click === 'DevOps' ? 'active' : ''}
-          >
-            DevOps
-          </li>
-          <li
-            onClick={() => filterGuides('Web')}
-            className={click === 'Web' ? 'active' : ''}
-          >
-            Web
-          </li>
-          <li
-            onClick={() => filterGuides('Blockchain')}
-            className={click === 'Blockchain' ? 'active' : ''}
-          >
-            Blockchain
-          </li>
+          {['AI', 'DevOps', 'Web', 'Blockchain'].map(category => (
+            <li
+              key={category}
+              onClick={() => filterGuides(category)}
+              className={click === category ? 'active' : ''}
+            >
+              {category}
+            </li>
+          ))}
         </ul>
-
         <GuideCardPage
-          guidesContent={guidesContent}
           filteredGuides={filteredGuides}
           isDarkMode={isDarkMode}
         />
@@ -154,4 +125,4 @@ const Guides = ({ isDarkMode }) => {
   );
 };
 
-export default Guides;
+export default React.memo(Guides);
