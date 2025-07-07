@@ -4,13 +4,10 @@ import GuideCardPage from '../../components/GuideCardPage/GuideCardPage';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { images } from '../../assets/images';
 
-
-
-
 const guidesContent = [
   {
     title: 'Blockchain',
-    image: 'photo/Group 32.svg',
+    image: 'photo/Group_32.svg',
     time: '9',
     heading: 'Create Your First Blockchain: A Hands-On Workshop',
     description:
@@ -18,7 +15,7 @@ const guidesContent = [
   },
   {
     title: 'AI',
-    image: 'photo/Group 34 AI.svg',
+    image: 'photo/Group_34_AI.svg',
     time: '12',
     heading: 'Demystifying AI: From Sci-Fi to Reality',
     description:
@@ -26,7 +23,7 @@ const guidesContent = [
   },
   {
     title: 'AI',
-    image: 'photo/Group 85 AI computer.svg',
+    image: 'photo/Group_85_AI computer.svg',
     time: '12',
     heading: 'Demystifying Computer: A to Z',
     description:
@@ -34,7 +31,7 @@ const guidesContent = [
   },
   {
     title: 'DevOps',
-    image: 'photo/Group 87.svg',
+    image: 'photo/Group_87.svg',
     time: '12',
     heading: 'How to think Like an Engineer(For Noobs)',
     description:
@@ -42,7 +39,7 @@ const guidesContent = [
   },
   {
     title: 'Web',
-    image: 'photo/Group 39 Web.svg',
+    image: 'photo/Group_39_Web.svg',
     time: '12',
     heading:
       'Progressive Web Application: Bridging the Gap Between Web & Mobile',
@@ -95,18 +92,19 @@ const Guides = ({ isDarkMode }) => {
     }
   }, [currentCategory]);
 
- useEffect(() => {
-  const preloadImages = guidesContent.map(guide => {
-    const img = new Image();
-    img.src = guide.image;
-    img.onerror = () => console.error(`Failed to preload image: ${guide.image}`);
-    return img;
-  });
+  useEffect(() => {
+    const preloadImages = guidesContent.map(guide => {
+      const img = new Image();
+      img.src = guide.image;
+      img.onerror = () =>
+        console.error(`Failed to preload image: ${guide.image}`);
+      return img;
+    });
 
-  return () => {
-    preloadImages.forEach(img => (img.src = ''));
-  };
-}, [guidesContent]); // 
+    return () => {
+      preloadImages.forEach(img => (img.src = ''));
+    };
+  }, [guidesContent]); //
 
   return (
     <div className='wrapper'>
