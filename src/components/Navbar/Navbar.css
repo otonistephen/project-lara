@@ -88,17 +88,13 @@ nav {
     height: 100vh;
     width: 100vw; /* adjust this value to match the width of your menu */
     background-color: #fefefe;
-    /* padding: 2rem; */
     box-shadow: 0px 3px 4px 0px #00000012;
     transition: transform 0.5s ease-in-out;
     z-index: 1000;
     align-items: unset;
-    /* padding-left: 2.5rem; */
     transform: translateX(-100%);
   }
-  /* .nav-menu:not(.show){ 
-    transition: none; 
-  } */
+  
 
   .nav-menu.show {
     transform: translateX(0);

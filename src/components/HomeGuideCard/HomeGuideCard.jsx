@@ -42,6 +42,8 @@ const HomeGuideCard = ({ setImageSrc, isDarkMode }) => {
     setHovered('grid-1'); // Set the first grid as active on initial render
     setFirstIndex(0);
   }, []);
+
+  // Takes the page to the top when clicked
   const handleMenuClick = () => {
     window.scrollTo({ top: 0, behavior: 'smooth' });
     window.scrollTo({ top: 0, behavior: 'auto' });
@@ -150,12 +152,19 @@ const HomeGuideCard = ({ setImageSrc, isDarkMode }) => {
           />
         </div>
 
-        <a href='#' className={`btn ${isDarkMode ? 'dark' : ''}`}>
+        {/* <a href='#' className={`btn ${isDarkMode ? 'dark' : ''}`}>
           SEE ALL GUIDES
           <span className={`arrow-right ${isDarkMode ? 'dark' : ''}`}>
             <img src={images.arrowright} alt='arrow-right' />
           </span>
-        </a>
+        </a> */}
+        <Link to='./Guides' className={`btn ${isDarkMode ? 'dark' : ''}`} onClick={handleMenuClick}>
+          SEE ALL GUIDES{' '}
+          <span className={`arrow-right ${isDarkMode ? 'dark' : ''}`}>
+            {' '}
+            <img src={images.arrowright} alt='arrow-right' />{' '}
+          </span>
+        </Link>
       </div>
     </div>
   );
