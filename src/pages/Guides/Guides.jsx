@@ -83,7 +83,7 @@ const Guides = ({ isDarkMode }) => {
       const img = new Image();
       img.src = image;
       img.onerror = () =>
-        isMounted && console.warn(`[${preloadId}] Failed to preload: ${image}`);
+        isMounted && console.error(`[${preloadId}] Failed to preload: ${image}`);
       return img;
     });
     return () => {
